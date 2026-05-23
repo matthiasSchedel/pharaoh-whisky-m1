@@ -62,6 +62,33 @@ Tested environment:
 Expected result for the proven setup: title screen renders with
 `PHARAOH`, Sphinx / pyramid art, Impressions Games logo, and `Click to Start`.
 
+## Fullscreen / native resolution
+
+Pharaoh's original DirectDraw surface is small on modern Macs. For a screen-
+filling result, use cnc-ddraw scaling instead of increasing the game's internal
+resolution:
+
+```sh
+PHARAOH_DIR="$WINEPREFIX/drive_c/Program Files/Sierra/Pharaoh" \
+  ./scripts/configure-fullscreen.sh
+```
+
+The script updates `ddraw.ini` next to `Pharaoh.exe` with:
+
+```ini
+renderer=opengl
+windowed=false
+border=false
+maintas=true
+boxing=true
+width=0
+height=0
+```
+
+`width=0` and `height=0` let cnc-ddraw detect the active display. `maintas`
+and `boxing` preserve the 4:3 artwork with letterboxing or pillarboxing instead
+of stretching it.
+
 ## Full Recipe
 
 ### 1. Install tools
