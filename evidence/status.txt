@@ -1,0 +1,29 @@
+OK :Game text loaded.Sat May 23
+------------------------------------------------------------
+ 13:49:11   Debug and status report on
+ 13:49:12   OK :Active.
+ 13:49:12   OK :DD SetCooperative Level.
+ 13:49:12   OK :DD Set resolution.
+ 13:49:12   OK :GFX DirectDraw enabled.
+ 13:49:12   OK :DD Creating one Vram only.
+ 13:49:12   OK :DD can lock primary surface
+ 13:49:12   OK :DD Surface created.
+ 13:49:12   OK :DD surface_format is RGB 565.
+ 13:49:12   OK :Direct draw initialised.
+ 13:49:12   OK :Setup loaded DAT files.
+ 13:49:12   OK :Pharaoh setup.
+ 13:49:12    OK: model loaded
+ 13:49:12    OK: figure model data loaded
+ 13:49:12    OK: tax sentiment data loaded
+ 13:49:12    OK: trade_recommends data loaded
+ 13:49:12    OK: reason table loaded
+ 13:49:12   OK :Direct sound initialised.
+ 13:49:12   OK :Launching game loop.
+ 13:49:12   OK :DD Released.
+ 13:49:12   OK :DD SetCooperative Level.
+ 13:49:12   OK :DD Set resolution.
+ 13:49:12   OK :GFX DirectDraw enabled.
+ 13:49:12   OK :DD Creating one Vram only.
+ 13:49:12   OK :DD can lock primary surface
+ 13:49:12   OK :DD Surface created.
+ 13:49:12   OK :DD surface_format is RGB 565.

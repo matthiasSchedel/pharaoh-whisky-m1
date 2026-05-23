@@ -1,0 +1,14 @@
+# Local game media and extracted installs. Do not commit copyrighted game files.
+*.iso
+*.cue
+*.bin
+*.zip
+*.7z
+*.rar
+Pharaoh/
+pharaoh-bottle/
+drive_c/
+
+# macOS / editor noise.
+.DS_Store
+*.swp
