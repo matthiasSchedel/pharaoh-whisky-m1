@@ -229,6 +229,40 @@ automates the reversible parts of the recipe:
 
 It does not download Pharaoh or cnc-ddraw and does not include any game files.
 
+## HD / Modern Resolution Path
+
+The current v1 path above keeps original Pharaoh running through Wine and
+cnc-ddraw. The higher-resolution native-engine route is **Akhenaten**, not a
+stable Keriew `augustus-pharaoh` release. Akhenaten is a Julius/Augustus-derived
+Pharaoh engine fork: <https://github.com/dalerank/Akhenaten>.
+
+Current status from upstream verification:
+
+| Path | State |
+|---|---|
+| Akhenaten | Active Pharaoh/Cleopatra engine fork, requires original Pharaoh plus Cleopatra data. |
+| macOS arm64 binary | No release asset in latest upstream release `ra2510`; source build required. |
+| Original data | Required; point the engine at the existing Pharaoh install/data folder. |
+| Stability | Experimental; upstream says the project is in progress. Treat this as a second recipe, not a replacement for v1. |
+
+Expected advantages if the source build works on this Mac: SDL-native windowing,
+modern scaling, fewer Wine DirectDraw/input problems, and a path toward higher
+desktop resolutions. Not yet proven in this repo because upstream does not ship
+a macOS arm64 `.app` or `.dmg`.
+
+Manual build sketch:
+
+```sh
+brew install cmake sdl2
+git clone https://github.com/dalerank/Akhenaten.git ~/src/akhenaten
+cmake -S ~/src/akhenaten -B ~/src/akhenaten/build -DCMAKE_BUILD_TYPE=Release
+cmake --build ~/src/akhenaten/build --config Release
+```
+
+Then launch the built app/binary and select the Pharaoh game-data directory from
+the v1 Whisky bottle. Keep the v1 bottle intact until Akhenaten reaches menu and
+mission proof.
+
 ## Repo Contents
 
 ```text
